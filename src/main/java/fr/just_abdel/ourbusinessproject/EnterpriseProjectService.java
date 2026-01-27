@@ -1,6 +1,7 @@
 package fr.just_abdel.ourbusinessproject;
 
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
 import lombok.Getter;
 import org.springframework.stereotype.Service;
 
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class EnterpriseProjectService {
 
+    @PersistenceContext
     private final EntityManager entityManager;
 
     public EnterpriseProjectService(EntityManager entityManager) {
