@@ -8,7 +8,6 @@ import lombok.Setter;
 
 @Entity
 @Setter
-@Table (name = "projects")
 public class Project {
 
     @Id

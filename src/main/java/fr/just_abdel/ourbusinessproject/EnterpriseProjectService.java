@@ -3,7 +3,6 @@ package fr.just_abdel.ourbusinessproject;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import lombok.Getter;
-import org.hibernate.validator.internal.util.privilegedactions.NewSchema;
 import org.springframework.stereotype.Service;
 
 @Getter
@@ -21,6 +20,7 @@ public class EnterpriseProjectService {
     /**
      * Create and persist a new project with the given title and description
      * @param aTitle the title of the project
+     * @param enterprise the enterprise owning the project
      * @param aDescription the description of the project
      * @return the created project
      */

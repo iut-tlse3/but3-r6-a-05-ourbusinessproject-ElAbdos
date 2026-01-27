@@ -10,7 +10,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table (name = "enterprises")
 public class Enterprise {
 
     @Id
