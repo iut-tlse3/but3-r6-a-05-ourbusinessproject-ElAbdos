@@ -1,4 +1,4 @@
-# Part 1 – Création de classes du domaine
+ &# Part 1 – Création de classes du domaine
 
 L'objet de notre application est la gestion de projets proposés par des entreprises en 
 direction d'étudiants issus de diverses formations. 

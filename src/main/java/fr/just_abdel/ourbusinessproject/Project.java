@@ -12,7 +12,7 @@ public class Project {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+     private Long id;
 
     /**
      * Get and Set the title of the project
@@ -25,4 +25,7 @@ public class Project {
      */
     @Getter private String description;
 
+    public Object getId() {
+        return id;
+    }
 }
