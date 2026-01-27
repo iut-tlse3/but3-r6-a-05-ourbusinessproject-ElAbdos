@@ -1,6 +1,6 @@
 # Partie 2 – Gestion des relations
 
-## 1 – Gestion de relation entre Project et Enterprise
+## 1 – Gestion de relation entre fr.just_abdel.ourbusinessproject.Project et Enterprise
 
 Chaque projet est proposé par une entreprise qui doit être spécifiée à la création d'un projet.
 
@@ -15,9 +15,9 @@ EnterpriseProjectServiceIntegrationTest.java pour qu'il soit identique au conten
 
 3. Modifiez le contenu du code principal pour que tous les tests passent de nouveau.
 
-> fix #2.1 relation Project Enterprise
+> fix #2.1 relation fr.just_abdel.ourbusinessproject.Project Enterprise
 
-## 2 – Gestion de relation entre Enterprise et Project
+## 2 – Gestion de relation entre Enterprise et fr.just_abdel.ourbusinessproject.Project
 
 1. Modifiez le contenu des fichiers EnterpriseTest.java et EnterpriseProjectServiceIntegrationTest.java 
 pour qu'il soit identique au contenu disponible ici :
@@ -29,4 +29,4 @@ pour qu'il soit identique au contenu disponible ici :
 
 3. Modifiez le contenu du code principal de telle sorte que les tests passent de nouveau.
 
->  fix #2.2 relation Enterprise Project 
+>  fix #2.2 relation Enterprise fr.just_abdel.ourbusinessproject.Project 
