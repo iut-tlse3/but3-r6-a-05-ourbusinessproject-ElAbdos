@@ -1,5 +1,6 @@
 package fr.just_abdel.ourbusinessproject;
 
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -8,7 +9,13 @@ import lombok.Setter;
 
 @Getter
 @Setter
+@Entity
+@Table (name = "enterprises")
 public class Enterprise {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     /**
      * Get and Set the name of the enterprise
@@ -31,4 +38,5 @@ public class Enterprise {
     @NotBlank @Email private String contactEmail;
 
     public Enterprise() {}
+
 }
