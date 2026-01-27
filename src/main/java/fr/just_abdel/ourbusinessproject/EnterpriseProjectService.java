@@ -3,6 +3,7 @@ package fr.just_abdel.ourbusinessproject;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import lombok.Getter;
+import org.hibernate.validator.internal.util.privilegedactions.NewSchema;
 import org.springframework.stereotype.Service;
 
 @Getter
@@ -11,6 +12,7 @@ public class EnterpriseProjectService {
 
     @PersistenceContext
     private final EntityManager entityManager;
+
 
     public EnterpriseProjectService(EntityManager entityManager) {
         this.entityManager = entityManager;
@@ -22,10 +24,11 @@ public class EnterpriseProjectService {
      * @param aDescription the description of the project
      * @return the created project
      */
-    public Project newProject(String aTitle, String aDescription) {
+    public Project newProject(String aTitle, String aDescription, Enterprise enterprise) {
         Project project = new Project();
         project.setTitle(aTitle);
         project.setDescription(aDescription);
+        project.setEnterprise(enterprise);
         this.entityManager.persist(project);
         this.entityManager.flush();
         return project;
