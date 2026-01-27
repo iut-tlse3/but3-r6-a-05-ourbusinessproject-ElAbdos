@@ -8,16 +8,13 @@ import lombok.Setter;
 public class Project {
 
     /**
-     * Get and Set the title of the projectt
-     * @param title title of the project
-     * @return title of the project
+     * Get and Set the title of the project
      */
     @Getter  @NotBlank
     private String title;
+
     /**
      * Get and Set the description of the project
-     * @param description description of the project
-     * @return description of the project
      */
     @Getter private String description;
 
