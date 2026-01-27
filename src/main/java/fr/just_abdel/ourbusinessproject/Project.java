@@ -6,6 +6,8 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
+
 @Entity
 @Setter
 public class Project {
@@ -39,6 +41,19 @@ public class Project {
      */
     public Object getId() {
         return id;
+    }
+
+    // Maintenir la relation bidirectionnelle
+    public void setEnterprise(Enterprise enterprise) {
+        this.enterprise = enterprise;
+        if (enterprise != null) {
+            if (enterprise.getProjects() == null) {
+                enterprise.setProjects(new ArrayList<>());
+            }
+            if (!enterprise.getProjects().contains(this)) {
+                enterprise.getProjects().add(this);
+            }
+        }
     }
 
 }
