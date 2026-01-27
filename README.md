@@ -1,8 +1,8 @@
 
 # Our Business Project - A spring boot / JPA project
 
-### NOM : DOE
-### Prénom : John
+### NOM : El Haroria
+### Prénom : Abdel
 ### Groupe de TP : 
 - [x] 1
 
