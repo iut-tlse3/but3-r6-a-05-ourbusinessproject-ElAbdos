@@ -5,7 +5,6 @@ import lombok.Getter;
 import org.springframework.stereotype.Service;
 
 @Getter
-@SuppressWarnings("ClassCanBeRecord")
 @Service
 public class EnterpriseProjectService {
 
