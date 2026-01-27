@@ -18,9 +18,9 @@ public class EnterpriseProjectService {
 
     /**
      * Create and persist a new project with the given title and description
-     * @param aTitle
-     * @param aDescription
-     * @return
+     * @param aTitle the title of the project
+     * @param aDescription the description of the project
+     * @return the created project
      */
     public Project newProject(String aTitle, String aDescription) {
         Project project = new Project();
@@ -33,8 +33,8 @@ public class EnterpriseProjectService {
 
     /**
      * Find a project by its id
-     * @param id
-     * @return
+     * @param id the id of the project
+     * @return the found project
      */
     public Project findProjectById(Object id) {
         return entityManager.find(Project.class, id);
@@ -42,11 +42,11 @@ public class EnterpriseProjectService {
 
     /**
      * Create and persist a new enterprise with the given parameters
-     * @param aName
-     * @param aDescription
-     * @param aContactName
-     * @param mail
-     * @return
+     * @param aName the name of the enterprise
+     * @param aDescription the description of the enterprise
+     * @param aContactName the contact name of the enterprise
+     * @param mail the contact email of the enterprise
+     * @return the created enterprise
      */
     public Enterprise newEnterprise(String aName, String aDescription, String aContactName, String mail) {
         Enterprise enterprise = new Enterprise();
@@ -61,8 +61,8 @@ public class EnterpriseProjectService {
 
     /**
      * Find an enterprise by its id
-     * @param anId
-     * @return
+     * @param anId this id is cool
+     * @return the found enterprise
      */
     public Enterprise findEnterpriseById(Long anId) {
         return entityManager.find(Enterprise.class, anId);
