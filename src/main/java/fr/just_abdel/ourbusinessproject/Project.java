@@ -1,16 +1,24 @@
 package fr.just_abdel.ourbusinessproject;
 
-import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
 @Setter
 public class Project {
 
-    @Getter  @NotEmpty
+    /**
+     * Get and Set the title of the projectt
+     * @param title title of the project
+     * @return title of the project
+     */
+    @Getter  @NotBlank
     private String title;
+    /**
+     * Get and Set the description of the project
+     * @param description description of the project
+     * @return description of the project
+     */
     @Getter private String description;
-
-    public Project() {}
 
 }
