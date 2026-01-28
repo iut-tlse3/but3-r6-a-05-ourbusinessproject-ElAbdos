@@ -46,6 +46,10 @@ public class Enterprise {
     @OneToMany(mappedBy = "enterprise")
     private Collection<Project> projects;
 
+    /**
+     * Add a project to the enterprise's list of projects
+     * @param project the project to add
+     */
     public void addProject(Project project) {
         if(this.projects == null) {
             this.projects = new ArrayList<>();
