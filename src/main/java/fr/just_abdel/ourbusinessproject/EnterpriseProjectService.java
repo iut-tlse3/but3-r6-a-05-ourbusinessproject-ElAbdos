@@ -2,8 +2,11 @@ package fr.just_abdel.ourbusinessproject;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.TypedQuery;
 import lombok.Getter;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Getter
 @Service
@@ -70,5 +73,15 @@ public class EnterpriseProjectService {
      */
     public Enterprise findEnterpriseById(Long anId) {
         return entityManager.find(Enterprise.class, anId);
+    }
+
+    /**
+     * Find all projects ordered by title ascending
+     * @return the list of all projects
+     */
+    public List<Project> findAllProjects() {
+        String query="SELECT p FROM Project p ORDER BY title ASC";
+        TypedQuery<Project> typedQuery=entityManager.createQuery(query, Project.class);
+        return typedQuery.getResultList();
     }
 }
