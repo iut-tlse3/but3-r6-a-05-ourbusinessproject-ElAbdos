@@ -27,6 +27,7 @@ public class Project {
      */
     @Getter private String description;
 
+    // Maintenir la relation bidirectionnelle
     /**
      * Get and Set the enterprise owning the project
      */
@@ -41,19 +42,6 @@ public class Project {
      */
     public Object getId() {
         return id;
-    }
-
-    // Maintenir la relation bidirectionnelle
-    public void setEnterprise(Enterprise enterprise) {
-        this.enterprise = enterprise;
-        if (enterprise != null) {
-            if (enterprise.getProjects() == null) {
-                enterprise.setProjects(new ArrayList<>());
-            }
-            if (!enterprise.getProjects().contains(this)) {
-                enterprise.getProjects().add(this);
-            }
-        }
     }
 
 }

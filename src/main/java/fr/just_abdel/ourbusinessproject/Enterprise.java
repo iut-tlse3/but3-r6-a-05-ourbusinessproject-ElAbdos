@@ -8,6 +8,7 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 
@@ -45,4 +46,10 @@ public class Enterprise {
     @OneToMany(mappedBy = "enterprise")
     private Collection<Project> projects;
 
+    public void addProject(Project project) {
+        if(this.projects == null) {
+            this.projects = new ArrayList<>();
+        }
+        this.projects.add(project);
+    }
 }
