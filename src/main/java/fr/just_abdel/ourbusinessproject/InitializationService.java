@@ -1,16 +1,18 @@
 package fr.just_abdel.ourbusinessproject;
 
 import jakarta.transaction.Transactional;
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class InitializationService {
-    private Project project1E1;
-    private Project project1E2;
-    private Project project2E1;
-    private Enterprise enterprise1;
-    private Enterprise enterprise2;
+
+    @Getter private Project project1E1;
+    @Getter private Project project1E2;
+    @Getter private Project project2E1;
+    @Getter private Enterprise enterprise1;
+    @Getter private Enterprise enterprise2;
 
     /**
      * This method initializes the project data.
@@ -44,38 +46,4 @@ public class InitializationService {
                 "comp2@com.com");
     }
 
-    /**
-     * @return the project1E1
-     */
-    public Project getProject1E1() {
-        return project1E1;
-    }
-
-    /**
-     * @return the project1E2
-     */
-    public Project getProject1E2() {
-        return project1E2;
-    }
-
-    /**
-     * @return the project2E1
-     */
-    public Project getProject2E1() {
-        return project2E1;
-    }
-
-    /**
-     * @return the enterprise1
-     */
-    public Enterprise getEnterprise1() {
-        return enterprise1;
-    }
-
-    /**
-     * @return the enterprise2
-     */
-    public Enterprise getEnterprise2() {
-        return enterprise2;
-    }
 }
