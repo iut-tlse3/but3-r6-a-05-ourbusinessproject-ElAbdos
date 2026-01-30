@@ -9,15 +9,9 @@ import org.springframework.stereotype.Component;
 @Getter
 @Component
 public class Bootstrap {
-
-    // a logger for this class
     private static final Logger logger = LoggerFactory.getLogger(Bootstrap.class);
 
-    /**
-     * -- GETTER --
-     *
-     * @return the initialisation service
-     */
+    @Getter
     private final InitializationService initializationService;
 
     /**
@@ -32,8 +26,8 @@ public class Bootstrap {
     public void init() {
         try {
             this.initializationService.initProjects();
-        } catch (RuntimeException re) {
-            logger.error("Error during initialization", re);
+        } catch (RuntimeException e) {
+            logger.error("Error during initialization", e);
         }
     }
 
